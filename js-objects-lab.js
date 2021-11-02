@@ -48,12 +48,35 @@ console.log(myPokemon);
 // - Become the sweaty human behind the counter, make your menu, and start making some friggin' pizzas.
 
 // 1. Create a menu object.
-// 2. Create 5 pizzas, each referenced within the menu object as distinct properties (like `dailySpecial: {` fill this in on the next step `}`).
-// 3. Give each pizza 6 properties.
+// 2. Create 3 pizzas, each referenced within the menu object as distinct properties (like `dailySpecial: {` fill this in on the next step `}`).
+// 3. Give each pizza 4 properties.
 // 4. Be sure to use each data type in the properties (think `calories: 5000`, `meat: null` or `preferredBy: 'vegetarians'`).
 // 5. **BONUS**: Create a method on the menu object that prints to the console the entirety of the menu!
 
-
+const menu = {
+    pizzaOne: {
+        calories: 1000,
+        toppings: ['mushrooms', 'onions', 'spinach'],
+        sauce: 'marinara',
+        meat: null
+    },
+    pizzaTwo: {
+        calories: 1500,
+        toppings: ['goat cheese', 'tomatoes', 'spinach'],
+        sauce: 'pesto',
+        meat: null
+    },
+    pizzaThree: {
+        calories: 2000,
+        toppings: ['pepperoni', 'sausage', 'sundried tomatoes'],
+        sauce: 'marinara',
+        meat: true
+    },
+    printMenu() {
+        console.log(menu);
+    }
+}
+menu.printMenu();
 // ---
 
 //  Card Those Minors!
