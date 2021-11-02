@@ -9,4 +9,4 @@ function showLocation(e) {
     yellowDiv.innerText = location;
 }
 
-yellowDiv.addEventListener('mouseover', showLocation);
+yellowDiv.addEventListener('mousemove', showLocation);
