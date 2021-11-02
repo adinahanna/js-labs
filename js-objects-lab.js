@@ -53,6 +53,7 @@ console.log(myPokemon);
 // 4. Be sure to use each data type in the properties (think `calories: 5000`, `meat: null` or `preferredBy: 'vegetarians'`).
 // 5. **BONUS**: Create a method on the menu object that prints to the console the entirety of the menu!
 
+
 // ---
 
 //  Card Those Minors!
@@ -65,3 +66,41 @@ console.log(myPokemon);
 // 4. Iterate through each guest in the `guests` array. If the guest is under age 18, add them to the `kidParty` array. If they are 18 or older, add them to the `adultParty` array.
 // 5. Now loop through the `kidParty` and `adultParty` arrays using an iterator method and print a nice message welcoming each guest by name to the correct party they are attending.
 // 6. **BONUS** Now try to empty the `guests` array using only one line of code!
+// 1. 
+class Guest {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+};
+
+const adina = new Guest('Adina', 29);
+const mitchell = new Guest('Mitchell', 29);
+const danielle = new Guest('Danielle', 34);
+const jordana = new Guest('Jordana', 32);
+const maya = new Guest('Maya', 2);
+const gilad = new Guest('Gilad', 35);
+const ariel = new Guest('Ariel', 4);
+// 2.
+const guests = [];
+guests.push(adina, mitchell, danielle, jordana, maya, gilad, ariel);
+// 3.
+const kidParty = [];
+const adultParty = [];
+// 4. 
+const partySort = (guests) => {
+    for (let i = 0; i < guests.length; i++){
+        if (guests[i].age < 18) {
+            kidParty.push(guests[i]);
+        } else {
+            adultParty.push(guests[i])}
+    }
+    // console.log('Kidparty: ',  kidParty);
+    // console.log('adultParty: ', adultParty);
+}
+partySort(guests);
+// 5.
+kidParty.forEach(kid => console.log('Welcome ' + kid.name + '!'));
+adultParty.forEach(adult => console.log('Welcome ' + adult.name + '!'));
+console.log(guests.splice(0, guests.length));
+console.log(guests);
